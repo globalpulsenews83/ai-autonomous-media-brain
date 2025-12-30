@@ -1,0 +1,12 @@
+name: Test Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call WordPress
+        run: |
+          curl -X POST https://globalpulsesnews.com/wp-json/aam/v1/test
